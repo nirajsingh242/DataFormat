@@ -26,6 +26,23 @@ import java.util.Queue;
 //Finding connected components
 //
 //Cycle detection (undirected graph)
+
+//🔥 Sample Graph (Where Output Differs)
+//0 → [1, 2]
+//1 → [3, 4]
+//2 → [5]
+//3 → []
+//4 → []
+//5 → []
+//🌳 Visual Representation
+//        0
+//      /   \
+//     1     2
+//    / \     \
+//   3   4     5
+
+//Output
+//0 1 2 3 4 5
 public class BfsAdjacencyList {
 
 	public static void main(String[] args) {
@@ -33,7 +50,7 @@ public class BfsAdjacencyList {
 				//1 → [0, 2, 3]
 				//2 → [0, 1]
 				//3 → [1]
-		        System.out.println("Scenario 1: Normal DFS");
+		        System.out.println("Scenario 1: Normal BFS");
 				int v=4;
 				ArrayList<ArrayList<Integer>> adjList=new ArrayList<>(v);
 				for(int i=0;i<v;i++)
@@ -49,7 +66,7 @@ public class BfsAdjacencyList {
 				bfs(adjList,4,0);
 				System.out.println("");
 				System.out.println("........................................................................");
-				 System.out.println("Scenario 2: Disconnected DFS with count");
+				 System.out.println("Scenario 2: Disconnected BFS with count");
 				int n = 9; // nodes 0 to 8
 
 		        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();

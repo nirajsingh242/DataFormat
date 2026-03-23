@@ -1,0 +1,75 @@
+🧠 Ultra-Short Memory Trick
+
+DFS = Stack = Deep
+
+BFS = Queue = Level
+
+⚡ Code Flow in 1 Line
+
+DFS:
+visit → recurse → backtrack
+
+BFS:
+enqueue → process → enqueue neighbors
+
+BFS (Breadth First Search)
+--------------------------
+Start → explore LEVEL → next level → repeat
+
+Code Flow:
+bfs(s):
+  mark visited[s]
+  enqueue(s)
+
+  while queue not empty:
+    u = dequeue()
+    print(u)
+    for each v in adj[u]:
+      if not visited:
+        mark visited[v]
+        enqueue(v)
+
+Key:
+- Uses Queue (FIFO)
+- Level-by-level
+- Gives shortest path (unweighted)
+
+
+
+DFS (Depth First Search)
+------------------------
+Start → go DEEP → backtrack → repeat
+
+Code Flow:
+dfs(u):
+  mark visited[u]
+  print(u)
+  for each v in adj[u]:
+    if not visited:
+      dfs(v)
+
+Key:
+- Uses Recursion / Stack
+- Path-focused
+- Can go very deep first
+
+
+⚡ Key Point (Very Important)
+
+👉 v is NOT number of edges
+👉 v is ONLY number of vertices (nodes)
+
+
+When nodes are strings instead of integers, you can’t use direct indexing like adjList.get(0).
+So you use a HashMap instead.
+
+🔹 Key Idea
+
+👉 Replace:
+
+ArrayList<ArrayList<Integer>>
+
+👉 With:
+
+HashMap<String, ArrayList<String>>
+
