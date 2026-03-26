@@ -108,7 +108,6 @@ public class CycleDetectionBFSNDFS {
 	
 	 static boolean dfsRec(List<List<Integer>> adjList, int s,boolean[] visited,int parent) {
 			visited[s]=true;
-			// System.out.println(s+" ");
 			 
 			 for(int u:adjList.get(s))
 			 {
